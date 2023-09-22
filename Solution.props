@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>11.0</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <Company>DKrOSS</Company>
+    <NeutralLanguage>en-US</NeutralLanguage>
+
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+
+    <JetBrainsAnnotationsVersion>2023.2.0</JetBrainsAnnotationsVersion>
+    <MinVerVersion>4.3.0</MinVerVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerMinimumMajorMinor>0.1</MinVerMinimumMajorMinor>
+    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(STRONG_NAME_KEYS_DIR)/DKrOSS.snk</AssemblyOriginatorKeyFile>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+</Project>

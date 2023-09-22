@@ -1,0 +1,15 @@
+<Project>
+  <ItemGroup>
+    <PackageReference
+      Condition=" '$(JetBrainsAnnotationsVersion)' != '' "
+      Include="JetBrains.Annotations"
+      PrivateAssets="All"
+      Version="$(JetBrainsAnnotationsVersion)"/>
+
+    <PackageReference
+      Condition=" '$(MinVerVersion)' != '' "
+      Include="MinVer"
+      PrivateAssets="All"
+      Version="$(MinVerVersion)" />
+  </ItemGroup>
+</Project>
