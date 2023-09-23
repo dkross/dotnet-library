@@ -1,0 +1,26 @@
+name: Publish Libraries
+on:
+  push:
+    tags:
+      - v0.*
+  workflow_dispatch:
+jobs:
+  Core:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/Core
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+      - name: Pack
+        run: dotnet pack --configuration Release
+      - name: Add NuGet source
+        run: dotnet nuget add source --username dkraemer --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github https://nuget.pkg.github.com/dkross/index.json
+      - name: Push package
+        run: dotnet nuget push bin/Release/DKrOSS.Core.*.nupkg --source github
