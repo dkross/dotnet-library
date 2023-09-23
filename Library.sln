@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Solution Items", "01 - Solution Items", "{81B6409B-101D-4AFC-9AC7-25E5867EBFAC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Solution.props = Solution.props
+		Solution.targets = Solution.targets
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - External Projects", "02 - External Projects", "{A7C9CC23-A0C8-4F09-8A7D-9CF570F3B363}"
+	ProjectSection(SolutionItems) = preProject
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Projects", "03 - Projects", "{B01E1CFF-DAAF-4EFE-9294-830ED463B2E0}"
+	ProjectSection(SolutionItems) = preProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKrOSS.Core", "src\Core\DKrOSS.Core.csproj", "{C62F75BC-9B9D-4FB0-8F0B-65E4AD9AA0DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C62F75BC-9B9D-4FB0-8F0B-65E4AD9AA0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62F75BC-9B9D-4FB0-8F0B-65E4AD9AA0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62F75BC-9B9D-4FB0-8F0B-65E4AD9AA0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62F75BC-9B9D-4FB0-8F0B-65E4AD9AA0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C62F75BC-9B9D-4FB0-8F0B-65E4AD9AA0DE} = {B01E1CFF-DAAF-4EFE-9294-830ED463B2E0}
+	EndGlobalSection
+EndGlobal

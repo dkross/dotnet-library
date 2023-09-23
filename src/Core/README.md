@@ -1,0 +1,1 @@
+# DKrOSS.Core Library
