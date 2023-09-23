@@ -24,18 +24,18 @@
   <PropertyGroup>
     <Authors>DKrOSS</Authors>
     <PackageProjectUrl>https://github.com/dkross/dotnet-library</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dkross/dotnet-library</RepositoryUrl>
     <PackageTags>dkross;library</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(STRONG_NAME_KEYS_DIR)/DKrOSS.snk</AssemblyOriginatorKeyFile>
-    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="." />
   </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(STRONG_NAME_KEYS_DIR)/DKrOSS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
 
 </Project>
