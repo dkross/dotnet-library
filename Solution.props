@@ -29,13 +29,16 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="." />
-  </ItemGroup>
-
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(STRONG_NAME_KEYS_DIR)/DKrOSS.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="." />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RESHARPER_SOURCE_TEMPLATES_DIR)' != '' And Exists('$(RESHARPER_SOURCE_TEMPLATES_DIR)')">
+    <Compile Include="$(RESHARPER_SOURCE_TEMPLATES_DIR)/*.cs" LinkBase="_ReSharper" />
+  </ItemGroup>
 </Project>
