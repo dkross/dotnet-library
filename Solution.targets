@@ -11,5 +11,10 @@
       Include="MinVer"
       PrivateAssets="All"
       Version="$(MinVerVersion)" />
+
+    <PackageReference
+      Condition=" '$(NewtonsoftJsonVersion)' != '' "
+      Include="Newtonsoft.Json"
+      Version="$(NewtonsoftJsonVersion)" />
   </ItemGroup>
 </Project>

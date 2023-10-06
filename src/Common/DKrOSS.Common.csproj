@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(MSBuildProjectDirectory)/../../Solution.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Core/DKrOSS.Core.csproj" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildProjectDirectory)/../../Solution.targets" />
+</Project>

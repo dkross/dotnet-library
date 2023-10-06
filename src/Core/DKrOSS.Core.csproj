@@ -2,8 +2,17 @@
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.props" />
 
   <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Description>DKrOSS core library</Description>
+    <NewtonsoftJsonVersion />
   </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.targets" />
 </Project>
