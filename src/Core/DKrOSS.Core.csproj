@@ -2,8 +2,9 @@
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.props" />
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Description>DKrOSS core library</Description>
+    <NewtonsoftJsonVersion />
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +12,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
   </ItemGroup>
 
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.targets" />

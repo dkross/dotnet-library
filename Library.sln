@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Solution Items", "01 -
 		global.json = global.json
 		LICENSE = LICENSE
 		README.md = README.md
+		scripts\pack.ps1 = scripts\pack.ps1
+		scripts\push.ps1 = scripts\push.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - External Projects", "02 - External Projects", "{A7C9CC23-A0C8-4F09-8A7D-9CF570F3B363}"

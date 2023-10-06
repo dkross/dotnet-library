@@ -1,5 +1,6 @@
 $projectsToPack = @(
-  "Core/DKrOSS.Core.csproj"
+  "Core/DKrOSS.Core.csproj",
+  "Common/DKrOSS.Common.csproj"
 )
 
 $solutionDir = "${PSScriptRoot}/.."

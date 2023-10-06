@@ -2,11 +2,11 @@
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.props" />
 
   <PropertyGroup>
-    <!-- <TargetFramework>netstandard2.0</TargetFramework> -->
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="." />
+    <ProjectReference Include="../Core/DKrOSS.Core.csproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.targets" />
