@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 
 namespace DKrOSS.Common;
 
+[PublicAPI]
 public abstract class Settings
 {
     private const UnixFileMode UnixFileMode700 =
@@ -132,6 +133,29 @@ public abstract class Settings
         {
             return null;
         }
+    }
+
+    [Pure]
+    protected static string ValidateAndGetSettingsPath(string @namespace, string settingsFileName,
+        string? customFilePath)
+    {
+        if (string.IsNullOrWhiteSpace(@namespace))
+            throw new ArgumentException(
+                Resources.StringIsNullOrEmpty, nameof(@namespace));
+
+        if (string.IsNullOrWhiteSpace(settingsFileName))
+            throw new ArgumentException(
+                Resources.StringIsNullOrEmpty, nameof(settingsFileName));
+
+        if (customFilePath is not null && !File.Exists(customFilePath))
+            throw new FileNotFoundException("Unable to find settings file", customFilePath);
+
+        customFilePath ??= FindNearestExistingSettingsFilePath(@namespace, settingsFileName);
+
+        if (customFilePath is null)
+            throw new FileNotFoundException("Unable to find any settings file in the search path");
+
+        return customFilePath;
     }
 
     protected static void CreateSettingsDirectory(string directoryPath)
